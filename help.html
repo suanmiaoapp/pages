@@ -1,11 +1,259 @@
+<!-- 分享页面 -->
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <style>
-    .hello{
-  color: red;
-      font-size:66px;
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>帮助和客服</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
-<div class="hello">Help</div>
-<img src="https://cdn.jsdelivr.net/gh/suanmiaoapp/support@0.0.3/a.jpg" style="width:100%;"/>
+<body>
+    <div class="common-wrap">
+        <div class="top-title">
+            常见问题
+        </div>
+        <div class="isul">
+            <ul class="con_ul">
+                <li>
+                    <div class="title">
+                        一个账号支持在多少个设备
+                    </div>
+                    <div class="con">
+                        一个账号支持在3个设备上使用. 包括桌面系统和手机系统.
+                    </div>  
+                </li>
+                <li>
+                    <div class="title">
+                        iOS上VPN进程进行被系统杀掉.
+                    </div>
+                    <div class="con">
+                        iOS对VPN进程的最大内存限制是15M, 超过15M后系统会杀掉进程, 这时可以再次连接即可.
+                    </div>  
+                </li>
+                <li>
+                    <div class="title">
+                        中国大陆安卓系统可能对VPN进程有改动
+                    </div>
+                    <div class="con">
+                        由于中国大陆的安卓系统对Android系统进行了大量的独家定制, 可能会对VPN的进程权限有改动, 通常这些权限或限制可以手动允许. 具体可以用搜索引擎搜索方法.
+                    </div>  
+                </li>
+                <li>
+                    <div class="title">
+                        macOS客户端首次打开需要在系统偏好设置里放行
+                    </div>
+                    <div class="con">
+                        首次打开蒜苗app, 此时系统会阻止. 只需要在[系统偏好设置] -> [安全性与隐私] 下方点击[允许]即可
+                    </div>  
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-kefu">
+        <img src="./images/kefu.png" alt="">
+        联系客服
+    </div>
+    <div class="motai">
+        <div class="motai-bg-wrap">
+            <div class="motai-title">
+                <span>
+                    <img class="kefu-img" src="./images/kefu.png" alt="">
+                    联系客服
+                </span>
+                <img class="motai-souqi" src="./images/zhankai.png" alt="">
+            </div>
+            <ul>
+                <!-- <li>
+                    <span>微信：</span> <i id="target1" data-clipboard-target="#target1">txthinking.com</i>   
+                </li>
+                <li>
+                    <span>QQ：</span><i id="target2" data-clipboard-target="#target2">882250389</i>
+                </li> -->
+                <li>
+                    <span>飞机：</span><i id="target3" data-clipboard-target="#target3">SuanMiao_TeleGram</i>
+                </li>
+                <li>
+                    <span>邮箱：</span><i id="target4" data-clipboard-target="#target4">suanmiao@yahoo.com</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+<script>
+    //点击分享有礼，app端调用的方法
+    $(document).on("click", '.bottom-kefu', shareRecommend)
+    function shareRecommend() {
+        $(".motai").show()
+    }
+    
+    $(document).on("click", '.motai-bg-wrap', function(e){
+        e.stopPropagation();
+    })
+   
+    $(document).on("click", '.motai', function(e){
+        
+        $(".motai").hide()
+    })
+    $(document).on("click", '.motai-souqi', function(e){
+        
+        $(".motai").hide()
+    })
+
+
+    var clipboard1 = new Clipboard('#target1');    
+    clipboard1.on('success', function(e) {
+        e.clearSelection();    
+        // console.log(e.clearSelection);    
+    });   
+    var clipboard2 = new Clipboard('#target2');    
+    clipboard1.on('success', function(e) {
+        e.clearSelection();    
+        // console.log(e.clearSelection);    
+    });   
+    var clipboard3 = new Clipboard('#target3');    
+    clipboard1.on('success', function(e) {
+        e.clearSelection();    
+        // console.log(e.clearSelection);    
+    });   
+    var clipboard4 = new Clipboard('#target4');    
+    clipboard1.on('success', function(e) {
+        e.clearSelection();    
+        // console.log(e.clearSelection);    
+    });    
+
+
+
+    $('.con_ul li .title').click(function(){    
+    $(this).toggleClass('act');
+    $(this).next().slideToggle();
+    })
+</script>
+<style>
+    body{
+        position: relative;
+        background: #F4F6F7;
+    }
+    .isul{
+        padding-bottom: 9.6vw;
+    }
+    .top-title{
+        width: 100%;
+        height: 13.6vw;
+        font-family: PingFang-SC-Semibold;
+        font-size: 3.73vw;
+        line-height: 13.6vw;
+        padding-left: 5.3vw;
+        color: #202428;
+        font-weight: 700;
+    }
+    .con_ul{
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+        background-color: #fff;
+        }
+    .con_ul li{
+        list-style: none;
+        padding: 2.7vw 5.3vw;
+        margin: 0;
+        border-bottom: 1px solid #EAECEE;
+    }
+    .con_ul li .title{
+        padding-right: 5.33vw;
+        background-image: url(images/zhankai.png);
+        background-position: 100% 50%;
+        background-repeat:no-repeat;
+        background-size: 2.3vw;
+        font-family: PingFang-SC-Regular;
+        font-size: 4.26vw;
+        color: #202428;
+    }
+    .con_ul li .title.act{
+        padding-right: 5.33vw;
+        background-image: url(images/shouqi.png);
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+        background-size: 2.3vw;
+    }
+    .con{
+        display: none;
+        padding: 1.33vw;
+        margin: 2.66vw 0;
+        font-family: PingFang-SC-Regular;
+        font-size: 3.73vw;
+        color: #626D7B;
+    }
+
+    .bottom-kefu{
+        display: inline-block;
+        text-align: center;
+        line-height: 9.66vh;
+        position: fixed;
+        bottom: 0;
+        height: 9.66vh;
+        width: 100%;
+        background-color: #ffffff;
+        font-family: PingFang-SC-Semibold;
+        font-size: 4.26vw;
+        color: #15181A;
+    }
+    .bottom-kefu img{
+        transform: translateY(-0.5vw);
+        width: 4vw;
+        height: 4vw;
+    }
+    .motai{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.4);
+    }
+    .motai-bg-wrap{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 6.1vw;
+        background-color: #fff;
+        box-shadow: 0 -0.53vw 4.8vw 0 rgba(142,157,174,0.10);
+        border-radius: 2.66vw 2.66vw 0 0;
+        z-index: 99;
+
+    }
+    .motai-bg-wrap .kefu-img{
+        transform: translateY(-0.5vw);
+        width: 4vw;
+        height: 4vw;
+     }
+     .motai-souqi{
+         float: right;
+         width: 2.3vw;
+        transform: translateY(2vw);
+     }
+    .motai-title{
+        font-weight: 700;
+        font-size: 4.26vw;
+        color: #15181A;
+        margin-bottom: 8vw;
+    }
+    .motai li{
+        margin-bottom: 5vw;
+        font-size: 4.26vw;
+        color: #15181A;
+    }
+    .motai li span{
+        display: inline-block;
+        width: 12.8vw;
+    }
+    .motai li i{
+        font-style: initial;
+    }
+</style>
+</html>
