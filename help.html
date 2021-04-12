@@ -22,6 +22,17 @@
         </div>
         
         <div style="border-bottom:1px solid #EAECEE;">
+            <div onclick="downup('mode')" style="display:flex;padding:0px 20px;flex-direction:row;justify-content:space-between;align-items:center;height:80px;background-color:#ffffff;font-size:16px;">
+                <div>出国模式和回国模式</div>
+                <div id="downmode" style="width:0;height:0;border:8px solid transparent;border-top:8px solid #626D7B;display:block;"></div>
+                <div id="upmode" style="width:0;height:0;border:8px solid transparent;border-bottom:8px solid #626D7B;display:none;"></div>
+            </div>
+            <div id="divwin" style="display:none;padding:0px 20px 20px 20px;flex-direction:row;background-color:#ffffff;font-size:14px;color:#626D7B;">
+                <div>出国模式: 适用于国内用户需要访问国外的网站应用. 回国模式: 适用于海外华人需要访问国内的网站应用</div>
+            </div>
+        </div>
+        
+        <div style="border-bottom:1px solid #EAECEE;">
             <div onclick="downup('win')" style="display:flex;padding:0px 20px;flex-direction:row;justify-content:space-between;align-items:center;height:80px;background-color:#ffffff;font-size:16px;">
                 <div>macOS或Windows上推荐Chrome浏览器, 部分软件需要手动配置代理</div>
                 <div id="downwin" style="width:0;height:0;border:8px solid transparent;border-top:8px solid #626D7B;display:block;"></div>
