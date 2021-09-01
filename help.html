@@ -28,7 +28,7 @@
                 <div id="upmode" style="width:0;height:0;border:8px solid transparent;border-bottom:8px solid #626D7B;display:none;"></div>
             </div>
             <div id="divmode" style="display:none;padding:0px 20px 20px 20px;flex-direction:row;background-color:#ffffff;font-size:14px;color:#626D7B;">
-                <div>出国模式: 适用于国内用户需要访问国外的网站应用. 回国模式: 适用于海外华人需要访问国内的网站应用</div>
+                <div>出国模式: 适用于国内用户需要访问国外的网站应用. 回国模式（beta）: 适用于海外华人需要访问国内的网站应用</div>
             </div>
         </div>
         
@@ -50,13 +50,13 @@
                 <div id="up0" style="width:0;height:0;border:8px solid transparent;border-bottom:8px solid #626D7B;display:none;"></div>
             </div>
             <div id="div0" style="display:none;padding:0px 20px 20px 20px;flex-direction:row;background-color:#ffffff;font-size:14px;color:#626D7B;">
-                <div>考慮到個人有倆電腦的情況，一个账号支持在【本人的】3个设备上使用. 包括桌面系统和手机系统。比如可用在工作電腦，家庭電腦，本人手機。不要分享給他人，會封號喔。</div>
+                <div>考慮到個人有倆電腦的情況，一个账号支持在【本人的】3个设备上使用. 包括桌面系统和手机系统。比如可用在工作電腦，家庭電腦，本人手機。【不要分享給第二个人，會封號喔】。</div>
             </div>
         </div>
 
         <div style="border-bottom:1px solid #EAECEE;">
             <div onclick="downup('2')" style="display:flex;padding:0px 20px;flex-direction:row;justify-content:space-between;align-items:center;height:80px;background-color:#ffffff;font-size:16px;">
-                <div>中国大陆安卓系统可能对VPN进程有改动</div>
+                <div>中国大陆安卓系统安裝apk以及可能对VPN进程有改动</div>
                 <div id="down2" style="width:0;height:0;border:8px solid transparent;border-top:8px solid #626D7B;display:block;"></div>
                 <div id="up2" style="width:0;height:0;border:8px solid transparent;border-bottom:8px solid #626D7B;display:none;"></div>
             </div>
@@ -72,7 +72,51 @@
                 <div id="upfake" style="width:0;height:0;border:8px solid transparent;border-bottom:8px solid #626D7B;display:none;"></div>
             </div>
             <div id="divfake" style="display:none;padding:0px 20px 20px 20px;flex-direction:row;background-color:#ffffff;font-size:14px;color:#626D7B;">
-                <div>蒜苗旨在为大家提供一个稳定的上网环境，对于虚假邀请，惡意使用，政治人士，以及有特殊需求的用戶请选择其他平台。谢谢您的支持。</div>
+                <div>蒜苗旨在为大家提供一个稳定的上网环境，我们相信稳定远比时快时慢的速度更重要，对于虚假邀请，惡意使用，政治人士，以及有特殊需求的用戶请选择其他平台。谢谢您的支持。</div>
+            </div>
+        </div>
+        
+        <div style="border-bottom:1px solid #EAECEE;">
+            <div onclick="downup('port')" style="display:flex;padding:0px 20px;flex-direction:row;justify-content:space-between;align-items:center;height:80px;background-color:#ffffff;font-size:16px;">
+                <div>listen tcp 127.0.0.1:1080: bind: address already in use</div>
+                <div id="downport" style="width:0;height:0;border:8px solid transparent;border-top:8px solid #626D7B;display:block;"></div>
+                <div id="upport" style="width:0;height:0;border:8px solid transparent;border-bottom:8px solid #626D7B;display:none;"></div>
+            </div>
+            <div id="divport" style="display:none;padding:0px 20px 20px 20px;flex-direction:row;background-color:#ffffff;font-size:14px;color:#626D7B;">
+                <div>這個問題的原因是 1080 端口被其他程序佔用了。您可以停止其他佔用1080端口的程序。如果您不知道是什麼程序佔用的，建議 1. 重新啟動電腦 （避免有開機自啟動項）2.打開蒜苗 3. 連結蒜苗 </div>
+            </div>
+        </div>
+        
+        <div style="border-bottom:1px solid #EAECEE;">
+            <div onclick="downup('hyperv')" style="display:flex;padding:0px 20px;flex-direction:row;justify-content:space-between;align-items:center;height:80px;background-color:#ffffff;font-size:16px;">
+                <div>listen tcp 127.0.0.1:1080: bind: An attempt was made to access a socket in a way forbidden by its access permissions</div>
+                <div id="downhyperv" style="width:0;height:0;border:8px solid transparent;border-top:8px solid #626D7B;display:block;"></div>
+                <div id="uphyperv" style="width:0;height:0;border:8px solid transparent;border-bottom:8px solid #626D7B;display:none;"></div>
+            </div>
+            <div id="divhyperv" style="display:none;padding:0px 20px 20px 20px;flex-direction:row;background-color:#ffffff;font-size:14px;color:#626D7B;">
+                <div>這個問題的原因可能是安装了 Hyper-V，導致1080端口被保留。可以參考：https://stackoverflow.com/questions/15619921/an-attempt-was-made-to-access-a-socket-in-a-way-forbidden-by-its-access-permissi</div>
+            </div>
+        </div>
+        
+        <div style="border-bottom:1px solid #EAECEE;">
+            <div onclick="downup('p')" style="display:flex;padding:0px 20px;flex-direction:row;justify-content:space-between;align-items:center;height:80px;background-color:#ffffff;font-size:16px;">
+                <div>關於電腦上支付寶無法支付的問題</div>
+                <div id="downp" style="width:0;height:0;border:8px solid transparent;border-top:8px solid #626D7B;display:block;"></div>
+                <div id="upp" style="width:0;height:0;border:8px solid transparent;border-bottom:8px solid #626D7B;display:none;"></div>
+            </div>
+            <div id="divp" style="display:none;padding:0px 20px 20px 20px;flex-direction:row;background-color:#ffffff;font-size:14px;color:#626D7B;">
+                <div>目前支付寶支付只支持在手機上打開連結支付，如果您在電腦上選用支付寶支付時，可以複製支付連結用手機打開進行支付。</div>
+            </div>
+        </div>
+        
+        <div style="border-bottom:1px solid #EAECEE;">
+            <div onclick="downup('windows')" style="display:flex;padding:0px 20px;flex-direction:row;justify-content:space-between;align-items:center;height:80px;background-color:#ffffff;font-size:16px;">
+                <div>其他Windows問題</div>
+                <div id="downwindows" style="width:0;height:0;border:8px solid transparent;border-top:8px solid #626D7B;display:block;"></div>
+                <div id="upwindows" style="width:0;height:0;border:8px solid transparent;border-bottom:8px solid #626D7B;display:none;"></div>
+            </div>
+            <div id="divwindows" style="display:none;padding:0px 20px 20px 20px;flex-direction:row;background-color:#ffffff;font-size:14px;color:#626D7B;">
+                <div>目前 Windows 客戶端在全新正版 Windows 10 中英文系統上測試通過。建議您使用正版 Windows 系統，不安裝其他同類軟件，殺毒軟件，等。</div>
             </div>
         </div>
 
